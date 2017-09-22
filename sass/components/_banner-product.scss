@@ -1,0 +1,25 @@
+.banner-container {
+  background-color: #00cace;
+  padding-bottom: 0;
+
+  .breadcrumb {
+    background-color: inherit;
+  }
+}
+
+.shape-container {
+  background: url("../assets/imgs/bkg-img.jpg") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  height: 350px;
+  width: 100%;
+
+  &:before {
+    content: "";
+    border-width: 60px 960px 0 0;
+    display: block;
+    border-style: solid;
+    border-width: 30px 960px 0 0;
+    border-color: #00cace transparent transparent;
+  }
+}

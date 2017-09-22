@@ -1,0 +1,20 @@
+.social-share {
+
+  span {
+    margin-right: 10px;
+  }
+
+  .social-share__elems {
+    margin: 0;
+
+    li {
+      border: 1px solid #3c3c3c;
+      height: 30px;
+      width: 30px;
+
+      &:not(:last-of-type) {
+        margin-right: 5px;
+      }
+    }
+  }
+}
