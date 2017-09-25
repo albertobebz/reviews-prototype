@@ -1,0 +1,38 @@
+.social-share {
+
+  li {
+    border: 1px solid #3c3c3c;
+    height: 30px;
+    width: 30px;
+
+    &:not(:last-of-type) {
+      margin-right: 5px;
+    }
+  }
+
+  &.review {
+
+    li {
+      border: 1px solid $mn-turquoise-dark;
+
+      i {
+        color: $mn-turquoise-dark;
+      }
+    }
+  }
+
+  &.on-blue-bkg {
+
+    span {
+      color: #ffffff;
+    }
+
+    li {
+      border: 1px solid #ffffff;
+
+      i {
+        color: #ffffff;
+      }
+    }
+  }
+}

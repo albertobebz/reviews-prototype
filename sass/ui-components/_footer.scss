@@ -1,0 +1,18 @@
+footer {
+  background-color: $mn-blue;
+
+  .footer__menu {
+
+    li {
+      display: inline-block;
+
+      a {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .social-share {
+    border-bottom: 1px solid #ffffff;
+  }
+}

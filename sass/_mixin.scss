@@ -1,3 +1,4 @@
+/* --- Headings Styles --- */
 @mixin headings {
   h1, h2, h3, h4, h5, h6 {
     @content;
@@ -5,7 +6,6 @@
 }
 
 /* --- Triangle Shape --- */
-
 @mixin shape($shape-color, $shape-h, $shape-w) {
   $shape-h-mob: $shape-h * 2;
   overflow: hidden;
@@ -16,9 +16,5 @@
     border-style: solid;
     border-width: $shape-h $shape-w 0 0;
     border-color: $shape-color transparent transparent;
-
-    @include media($tablet-min) {
-      border-width: $shape-h-mob $shape-w 0 0;
-    }
   }
 }
