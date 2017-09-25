@@ -7,8 +7,8 @@
 /* btn-blue shadows */
 /* --- Headings Styles --- */
 /* --- Triangle Shape --- */
-.max-w {
-  max-width: 960px; }
+body {
+  font-family: 'Roboto', sans-serif !important; }
 
 @media (min-width: 1200px) {
   .container {
