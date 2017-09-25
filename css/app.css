@@ -1,8 +1,64 @@
+/* --- Global Measures --- */
+/* --- Colours Guide --- */
+/* Text and Titles */
+/* Highlights */
+/* btn-orange */
+/* btn-blue & links */
+/* btn-blue shadows */
+h1, h2, h3, h4, h5, h6 {
+  color: #4A4A4A;
+  margin: 0; }
+
+h1 {
+  line-height: 1em;
+  font-size: 36px; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 50px; } }
+
+h2,
+h3,
+h4 {
+  line-height: 1.2em;
+  font-weight: 500; }
+
+h2 {
+  font-size: 28px; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 32px; } }
+
+h3 {
+  font-size: 22px; }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 26px; } }
+
+h4 {
+  font-size: 18px; }
+
+p {
+  color: #4A4A4A;
+  line-height: 1.6em; }
+  p.stand-first {
+    font-size: 18px; }
+
+a {
+  color: #0061A1; }
+
+.standard-width {
+  max-width: 630px; }
+
 .bt {
   border-top: 1px solid rgba(0, 0, 0, 0.125); }
 
 .bb {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+
+.breadcrumb {
+  background-color: inherit; }
+  .breadcrumb .breadcrumb-item {
+    color: #4a4a4a; }
 
 .quote {
   background: url("../assets/imgs/pull-quotes.png") top left no-repeat;
@@ -15,9 +71,9 @@
 
 .banner-container {
   background-color: #00cace;
-  padding-bottom: 0; }
-  .banner-container .breadcrumb {
-    background-color: inherit; }
+  margin-bottom: 30px; }
+  .banner-container h1 {
+    color: #ffffff; }
 
 .shape-container {
   background: url("../assets/imgs/bkg-img.jpg") no-repeat center center;
@@ -30,11 +86,13 @@
     border-width: 60px 960px 0 0;
     display: block;
     border-style: solid;
-    border-width: 30px 960px 0 0;
+    border-width: 35px 1120px 0 0;
     border-color: #00cace transparent transparent; }
 
 .talk-discussion {
   background-color: grey; }
+  .talk-discussion h1 {
+    color: #ffffff; }
 
 .social-share span {
   margin-right: 10px; }
@@ -46,6 +104,14 @@
     width: 30px; }
     .social-share .social-share__elems li:not(:last-of-type) {
       margin-right: 5px; }
+
+.mini-article h4 {
+  font-size: 18px; }
+.mini-article > div {
+  max-width: 135px;
+  padding: 0; }
+  .mini-article > div:not(:last-of-type) {
+    margin-right: 10px; }
 
 footer {
   background-color: #0061a1;

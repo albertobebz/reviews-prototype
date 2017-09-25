@@ -1,9 +1,9 @@
 .banner-container {
   background-color: #00cace;
-  padding-bottom: 0;
+  margin-bottom: 30px;
 
-  .breadcrumb {
-    background-color: inherit;
+  h1 {
+    color: #ffffff;
   }
 }
 
@@ -19,7 +19,7 @@
     border-width: 60px 960px 0 0;
     display: block;
     border-style: solid;
-    border-width: 30px 960px 0 0;
+    border-width: 35px 1120px 0 0;
     border-color: #00cace transparent transparent;
   }
 }
