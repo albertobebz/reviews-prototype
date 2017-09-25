@@ -46,9 +46,6 @@ p {
 a {
   color: #0061A1; }
 
-.standard-width {
-  max-width: 630px; }
-
 .bt {
   border-top: 1px solid rgba(0, 0, 0, 0.125); }
 
@@ -70,8 +67,8 @@ a {
   margin: 30px 0; }
 
 .banner-container {
-  background-color: #00cace;
-  margin-bottom: 30px; }
+  background-color: #00CACE;
+  max-width: 960px; }
   .banner-container h1 {
     color: #ffffff; }
 
@@ -83,11 +80,13 @@ a {
   width: 100%; }
   .shape-container:before {
     content: "";
-    border-width: 60px 960px 0 0;
     display: block;
     border-style: solid;
-    border-width: 35px 1120px 0 0;
-    border-color: #00cace transparent transparent; }
+    border-width: 35px 960px 0 0;
+    border-color: #00CACE transparent transparent; }
+
+.related-products h4 {
+  color: #00A4A6; }
 
 .talk-discussion {
   background-color: grey; }

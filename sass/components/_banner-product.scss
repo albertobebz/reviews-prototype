@@ -1,6 +1,6 @@
 .banner-container {
-  background-color: #00cace;
-  margin-bottom: 30px;
+  background-color: $mn-turquoise;
+  max-width: 960px;
 
   h1 {
     color: #ffffff;
@@ -16,10 +16,9 @@
 
   &:before {
     content: "";
-    border-width: 60px 960px 0 0;
     display: block;
     border-style: solid;
-    border-width: 35px 1120px 0 0;
-    border-color: #00cace transparent transparent;
+    border-width: 35px 960px 0 0;
+    border-color: $mn-turquoise transparent transparent;
   }
 }
