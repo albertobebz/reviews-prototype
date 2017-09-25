@@ -5,6 +5,7 @@
 /* btn-orange */
 /* btn-blue & links */
 /* btn-blue shadows */
+/* --- Triangle Shape --- */
 h1, h2, h3, h4, h5, h6 {
   color: #4A4A4A;
   margin: 0; }
@@ -46,6 +47,9 @@ p {
 a {
   color: #0061A1; }
 
+.max-w {
+  max-width: 960px; }
+
 .bt {
   border-top: 1px solid rgba(0, 0, 0, 0.125); }
 
@@ -67,31 +71,31 @@ a {
   margin: 30px 0; }
 
 .banner-container {
-  background-color: #00CACE;
-  max-width: 960px; }
+  background-color: #00CACE; }
   .banner-container h1 {
     color: #ffffff; }
-
-.shape-container {
-  background: url("../assets/imgs/bkg-img.jpg") no-repeat center center;
-  background-size: cover;
-  overflow: hidden;
-  height: 350px;
-  width: 100%; }
-  .shape-container:before {
-    content: "";
-    display: block;
-    border-style: solid;
-    border-width: 35px 960px 0 0;
-    border-color: #00CACE transparent transparent; }
+  .banner-container .shape-container {
+    background: url("../assets/imgs/bkg-img.jpg") no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    height: 350px;
+    width: 100%; }
+    .banner-container .shape-container:before {
+      content: "";
+      display: block;
+      border-style: solid;
+      border-width: 35px 960px 0 0;
+      border-color: #00CACE transparent transparent; }
 
 .related-products h4 {
   color: #00A4A6; }
 
 .talk-discussion {
   background-color: grey; }
-  .talk-discussion h1 {
+  .talk-discussion h2 {
     color: #ffffff; }
+  .talk-discussion .text-reviews-primary {
+    color: #0061A1; }
 
 .social-share span {
   margin-right: 10px; }
@@ -104,13 +108,14 @@ a {
     .social-share .social-share__elems li:not(:last-of-type) {
       margin-right: 5px; }
 
-.mini-article h4 {
-  font-size: 18px; }
-.mini-article > div {
-  max-width: 135px;
-  padding: 0; }
-  .mini-article > div:not(:last-of-type) {
-    margin-right: 10px; }
+.mini-article {
+  max-width: 630px; }
+  .mini-article h4 {
+    font-size: 18px;
+    color: #0061A1; }
+  @media (max-width: 991px) {
+    .mini-article .card {
+      margin-bottom: 10px; } }
 
 footer {
   background-color: #0061a1;
