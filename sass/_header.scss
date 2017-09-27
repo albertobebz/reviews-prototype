@@ -1,0 +1,16 @@
+#my-icon {
+  &:focus {outline:0;}
+}
+
+nav:not(.breadcrumb) {
+
+  &:first-of-type {
+    display: none;
+  }
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: $mn-blue !important;
+}

@@ -13,8 +13,16 @@ body {
 @media (min-width: 1200px) {
   .container {
     width: 960px; } }
-#menu-button {
-  margin-left: 30px; }
+#my-icon:focus {
+  outline: 0; }
+
+nav:not(.breadcrumb):first-of-type {
+  display: none; }
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: #0061A1 !important; }
 
 /*--- Utilities Classes ---*/
 .bt {

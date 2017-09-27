@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700" rel="stylesheet">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/6.1.7/jquery.mmenu.all.css'>
     <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/hamburgers.css">
     <title>review content</title>
 
     <script>
@@ -35,35 +36,113 @@
           }
         });
 
-        var API = $("#my-menu").data("mmenu");
+        const API = $("#my-menu").data("mmenu");
+        const $icon = $("#my-icon");
 
-        $("#menu-button").click(function(){
-          API.open();
+        $icon.on( "click", function() {
+           API.open();
         });
 
-        API.bind('opening', function() {
-          $('header img').attr('src', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrows_remove.svg');
+        API.bind( "open:finish", function() {
+           setTimeout(function() {
+              $icon.addClass( "is-active" );
+           }, 100);
         });
-
-        API.bind('closing', function() {
-          $('header img').attr('src', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrows_hamburger.svg');
+        API.bind( "close:finish", function() {
+           setTimeout(function() {
+              $icon.removeClass( "is-active" );
+           }, 100);
         });
-      })
+      });
 
     </script>
 
   </head>
   <body>
-    <!-- Nav -->
 
-    <div class="container">
-      <header>
-        <a href="#" id="menu-button">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrows_hamburger.svg"/>
-        </a>
+    <!-- Nav -->
+    <div class="container p-0">
+      <header class="d-flex align-items-center justify-content-between">
+        <button id="my-icon" class="hamburger hamburger--collapse" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <img class="pr-3" src="./assets/imgs/mn-logo.png" alt="MN logo">
       </header>
     </div>
-
+    <nav id="my-menu">
+      <ul>
+        <li><a href="#">Talk</a></li>
+        <li><a href="#">Pregnancy</a>
+          <ul>
+            <li><a href="#">Conception</a></li>
+            <li><a href="#">Problems getting pregnant</a></li>
+            <li><a href="#">Pregnancy health</a></li>
+            <li><a href="#">Labour and birth</a></li>
+            <li><a href="#">Miscarriage</a></li>
+            <li><a href="#">Baby names</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Parenting</a>
+          <ul>
+            <li><a href="#">Babies</a>
+              <ul>
+                <li><a href="#">Sleep</a></li>
+                <li><a href="#">Feeding</a></li>
+                <li><a href="#">Teething</a></li>
+                <li><a href="#">Baby health</a></li>
+                <li><a href="#">Development</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Children</a>
+              <ul>
+                <li><a href="#">Toddlers</a></li>
+                <li><a href="#">Younger children</a></li>
+                <li><a href="#">Older children</a></li>
+                <li><a href="#">Child health</a></li>
+                <li><a href="#">Development</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Education</a>
+              <ul>
+                <li><a href="#">Pre-school</a></li>
+                <li><a href="#">Primary</a></li>
+                <li><a href="#">Secondary</a></li>
+                <li><a href="#">Further education</a></li>
+                <li><a href="#">School gate</a></li>
+                <li><a href="#">Tutoring</a></li>
+                <li><a href="#">Special needs</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Life</a>
+          <ul>
+            <li><a href="#">Relationships</a></li>
+            <li><a href="#">Home & garden</a></li>
+            <li><a href="#">Food & drink</a></li>
+            <li><a href="#">Culture</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Local</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Celebrations</a></li>
+            <li><a href="#">Finance & money</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Work</a>
+          <ul>
+            <li><a href="#">Find a job</a></li>
+            <li><a href="#">Your rights</a></li>
+            <li><a href="#">Back to work</a></li>
+            <li><a href="#">Maternity leave</a></li>
+            <li><a href="#">Childcare</a></li>
+            <li><a href="#">Being a working parent</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    
     <!-- Hero Product -->
     <div class="container">
       <div class="row">
@@ -343,18 +422,5 @@
       </footer>
     </div>
 
-    <nav id="my-menu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About us</a>
-          <ul>
-            <li><a href="#">History</a></li>
-            <li><a href="#">The team</a></li>
-            <li><a href="#">Our address</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
   </body>
 </html>
