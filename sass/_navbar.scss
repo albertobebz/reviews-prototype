@@ -61,8 +61,18 @@
   margin-bottom: 3px;
 }
 
-@media (min-width: 800px) {
+.show>.dropdown-menu {
+  display: flex;
+  width: 100%;
+}
+
+.navbar-default {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/*@media (min-width: 800px) {
   nav {
     display: block !important;
   }
-}
+}*/

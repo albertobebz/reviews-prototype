@@ -76,9 +76,19 @@ nav:not(.breadcrumb):first-of-type {
 .mega-dropdown-menu .form-group {
   margin-bottom: 3px; }
 
-@media (min-width: 800px) {
+.show > .dropdown-menu {
+  display: flex;
+  width: 100%; }
+
+.navbar-default {
+  max-width: 960px;
+  margin: 0 auto; }
+
+/*@media (min-width: 800px) {
   nav {
-    display: block !important; } }
+    display: block !important;
+  }
+}*/
 /*--- Utilities Classes ---*/
 .bt {
   border-top: 1px solid rgba(0, 0, 0, 0.125); }
