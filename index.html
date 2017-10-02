@@ -23,6 +23,19 @@
 
         $("#menu").mmenu({
         // options
+          extensions: ["pagedim-black", "theme-white"],
+          setSelected: {
+            hover: true,
+            parent: true
+          },
+          navbars: {
+            content: [
+              "searchfield"
+            ]
+          },
+          navbar: {
+            title: 'Mumsnet'
+          }
         }, {
           // configuration
           clone: true
@@ -35,9 +48,8 @@
 
         function resize() {
           if ($window.width() > 800) {
-            console.log($elem)
-            if($elem.hasClass('mm-opened')){
-              $elem.removeClass('mm-opened');
+            if($elem.hasClass("mm-opened")){
+              $elem.removeClass("mm-opened");
             }
           }
         }
@@ -74,23 +86,30 @@
           <ul>
             <li><a href="#">Menu 1</a>
               <ul>
-                <li><a href="#">Menu 2</a></li>
-                <li><a href="#">Menu 2</a></li>
-                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Second Level</a>
+                  <ul>
+                    <li><a href="#">Menu 1.1</a></li>
+                    <li><a href="#">Menu 1.2</a></li>
+                    <li><a href="#">Menu 1.3</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
-            <li><a href="#">Menu 1</a>
+            <li><a href="#">Menu 2</a>
               <ul>
                 <li><a href="#">Menu 2</a></li>
                 <li><a href="#">Menu 2</a></li>
                 <li><a href="#">Menu 2</a></li>
               </ul>
             </li>
-            <li><a href="#">Menu 1</a>
+            <li><a href="#">Menu 3</a>
               <ul>
-                <li><a href="#">Menu 2</a></li>
-                <li><a href="#">Menu 2</a></li>
-                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+                <li><a href="#">Menu 3</a></li>
+                <li><a href="#">Menu 3</a></li>
               </ul>
             </li>
           </ul>
