@@ -2,15 +2,240 @@
   &:focus {outline:0;}
 }
 
-nav:not(.breadcrumb) {
-
-  &:first-of-type {
-    display: none;
-  }
-}
-
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
   background-color: $mn-blue !important;
+}
+
+/*** Superfish ESSENTIAL STYLES ***/
+.dropdown-nav { text-align:right; margin-bottom: 15px; }
+#menu ul, #menu ul *, #menuB ul, #menuB ul * { margin: 0; padding: 0; list-style: none; }
+#menu ul li, #menuB ul li { position: relative; }
+#menu ul ul, #menuB ul ul {
+	position: absolute;
+	visibility:hidden;
+	top: 100%;
+	left: 0;
+	z-index: 99;
+	opacity:0;
+	filter:alpha(opacity=0);
+	-webkit-transition:100ms ease;
+	-moz-transition:100ms ease;
+	-o-transition:100ms ease;
+	transition:100ms ease;
+
+}
+#menu ul > li, #menuB ul > li {	/*float: left;*/ display:inline-block; }
+#menu ul li:hover > ul,
+#menu ul li.sfHover > ul,
+#menuB ul li:hover > ul,
+#menuB ul li.sfHover > ul {
+	visibility:visible;
+	z-index: 99;
+	background-color: #102e66;
+	border-radius: 0px;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+#menu ul a, #menuB ul a { display: block; position: relative;}
+#menu ul ul, #menuB ul ul { top: 100%; left: 0;}
+*#menu ul ul ul, *#menuB ul ul ul { top: 0; left: 100%; }
+#menu ul > li > ul, #menuB ul > li > ul  { min-width: 14.5em; width:auto; white-space:nowrap; }
+#menu ul ul li, #menuB ul ul li { width: 100%; }
+#menu ul > li > ul > li, #menuB ul > li > ul > li { float: left; }
+
+#menu ul li.edge ul, #menuB ul li.edge ul { left: auto; right: 0 !important; }
+*#menu ul li.edge ul ul, *#menuB ul li.edge ul ul { left: auto; right: 100% !important; }
+*#menu ul ul li.edge ul, *#menuB ul ul li.edge ul { left: auto; right: 100% !important; }
+
+/* Vertical Style
+-------------------------------------------------------------- */
+#menu ul.vertical ul, #menuB ul.vertical ul { top: 0; left: 100%; }
+#menu ul.vertical, #menuB ul.vertical {	width: 100%; }
+#menu ul.vertical > li, #menuB ul.vertical > li { float: none; }
+#menu ul.vertical li, #menuB ul.vertical li { width: 100%; }
+
+/* Superfish Menu Design Styles
+-------------------------------------------------------------- */
+.top-menu-left { text-align:right; }
+.top-menu-left #menu ul li li { text-align:left; }
+.top-menu-right { background: #99b0c9; background: rgba(3,78,162,0.30); }
+@media (min-width: 768px) {
+	.navbar-nav>li {
+		float: none;
+	}
+}
+
+#menu ul, #menuB ul {
+	position:relative;
+	width: 100%;
+}
+
+#menu ul li, #menuB ul li { flex-grow:1; }
+#menu ul li a, #menuB ul li a {
+	padding: 		15px 1.15em 15px 1.15em;
+	text-decoration:none;
+	font-size: 1.2rem;
+	font-weight: 700;
+	line-height: 20px;
+	color: #034ea2;
+	letter-spacing:0;
+	text-transform: uppercase;
+}
+@media (max-width: 1041px) {
+	#menu ul li a, #menuB ul li a {
+	padding: 		15px .75em 15px .75em;
+	font-size: 1.2rem;
+	font-weight: 700;
+	line-height: 20px;
+	text-transform: uppercase;
+	}
+}
+
+@media (max-width: 968px) {
+	#menu ul li a, #menuB ul li a {
+		padding: 15px .75em 15px .75em;
+		font-size: 1rem;
+		font-weight: 700;
+		line-height: 20px;
+		text-transform: uppercase;
+	}
+}
+
+@media (max-width: 768px) {
+	#menu ul li a, #menuB ul li a {
+		padding: 15px .75em 15px .75em;
+		font-size: 1rem;
+		font-weight: 700;
+		line-height: 20px;
+		text-transform: uppercase;
+	}
+}
+
+#menu ul li li a, #menuB ul li li a {
+	padding: .45em 1.25em;
+	text-decoration: none; 
+	font-weight: normal;
+	text-transform:none;
+}
+
+#menu ul a, #menu ul a:visited, #menuB ul a, #menuB ul a:visited  {
+	line-height: 20px;
+}
+
+#menu ul li ul li a, #menu ul li ul li a:visited, #menuB ul li ul li a, #menuB ul li ul li a:visited  {
+	color: #444;
+	color: #fff;
+	line-height: 20px;
+}
+
+#menu ul li:hover, #menu ul li.sfHover,
+#menu ul a:focus, #menu ul a:hover, #menu ul a:active,
+#menuB ul li:hover, #menuB ul li.sfHover,
+#menuB ul a:focus, #menuB ul a:hover, #menuB ul a:active {
+	outline: 0;
+	text-decoration: none;
+	background: rgba(0,0,0,0.03);
+	
+}
+#menu ul li li:hover, #menu ul li li.sfHover,
+#menu ul li li a:focus, #menu ul li li a:hover, #menu ul li li a:active,
+#menuB ul li li:hover, #menuB ul li li.sfHover,
+#menuB ul li li a:focus, #menuB ul li li a:hover, #menuB ul li li a:active {
+	outline:		0;
+	text-decoration: none;
+}
+
+#menu ul li li a:focus, #menu ul li li a:hover,
+#menuB ul li li a:focus, #menuB ul li li a:hover {
+	background: rgba(0,0,0,0.05);
+}
+
+#menu ul li ul li.has-child > a:after,
+#menuB ul li ul li.has-child > a:after {
+   color: #444;
+   content: ' \25b8';
+   font-size:16px;
+   line-height: 1;
+}
+
+#menu ul li.edge ul li.has-child > a:before,
+#menuB ul li.edge ul li.has-child > a:before {
+   color: #444;
+   content: '\25c2  ';
+   font-size:16px;
+   line-height: 1;
+}
+
+#menu ul li.edge ul li.has-child > a:after,
+#menuB ul li.edge ul li.has-child > a:after {
+   content: '';
+   font-size:1px;
+   line-height: 0;
+}
+
+#menu .top-nav li a, #menuB .top-nav li a { color:#1c67ae; }
+
+#menu li.login { float:right; }
+#menu li.login a { background: rgba(3,78,162,.6); color: #fff;}
+#menu li.login a:hover { background: rgba(3,78,162,.9); }
+#menu li.login a:visited { color: #fff; }
+
+.navbar-member #menu ul {
+	float: left;
+	margin-right: -15px;
+}
+.navbar-member li a { color: #fff; }
+.navbar-member li li a { color: #444; }
+.navbar-member li a:visited { color: #fff; }
+.navbar-member li li a:visited { color: #444; }
+
+.navbar-member #menu ul li.has-child > a:after {
+   color: #fff;
+   content: ' \25BE';
+}
+.navbar-member #menu ul li li.has-child > a:after {
+   color: #444;
+   content: ' \25BE';
+}
+
+.mobileMenu { height: auto; }
+
+.mmenu-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    font-size:40px;
+    height:40px;
+    width:40px;
+    cursor:pointer;
+}
+
+.mmenu-toggle:after {
+    content:'\2261';
+    color:#222;
+}
+.mmenu-toggle:active {
+        top:1px;
+        left:1px;
+}
+.mm-page {
+    height: 100%;
+}
+
+@media (max-width: 820px) {
+	
+	.desktop-menu {
+		display: none;
+	}
+}
+
+@media (min-width: 821px) {
+
+	.mobile-menu {
+		display: none !important;
+	}
 }

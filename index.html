@@ -18,41 +18,34 @@
     <title>review content</title>
 
     <script>
+
       $(document).ready(function(){
 
-        $("#my-menu").mmenu({
-          extensions: ["pagedim-black", "theme-white"],
-          setSelected: {
-            hover: true,
-            parent: true
-          },
-          navbars: {
-            content: [
-              "searchfield"
-            ]
-          },
-          navbar: {
-            title: 'Mumsnet'
+        $("#menu").mmenu({
+        // options
+        }, {
+          // configuration
+          clone: true
+        });
+
+        var API = $("#menu").data( "mmenu" );
+
+        var $window = $(window),
+            $elem = $(".mm-menu.mm-offcanvas");
+
+        function resize() {
+          if ($window.width() > 800) {
+            console.log($elem)
+            if($elem.hasClass('mm-opened')){
+              $elem.removeClass('mm-opened');
+            }
           }
-        });
+        }
 
-        const API = $("#my-menu").data("mmenu");
-        const $icon = $("#my-icon");
-
-        $icon.on( "click", function() {
-           API.open();
-        });
-
-        API.bind( "open:finish", function() {
-           setTimeout(function() {
-              $icon.addClass( "is-active" );
-           }, 100);
-        });
-        API.bind( "close:finish", function() {
-           setTimeout(function() {
-              $icon.removeClass( "is-active" );
-           }, 100);
-        });
+        $window
+          .resize(resize)
+          .trigger('resize');
+          
       });
 
     </script>
@@ -63,85 +56,47 @@
     <!-- Nav -->
     <div class="container p-0">
       <header class="d-flex align-items-center justify-content-between">
-        <button id="my-icon" class="hamburger hamburger--collapse" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
         <img class="pr-3" src="./assets/imgs/mn-logo.png" alt="MN logo">
       </header>
     </div>
-    <nav id="my-menu">
-      <ul>
-        <li><a href="#">Talk</a></li>
-        <li><a href="#">Pregnancy</a>
+
+    <!-- mmenu wrapper -->
+    <div class="container">
+      <div class="mobile-menu">
+        <div class="col-12">
+          <a href="#menu" class="mmenu-toggle"></a>
+        </div>
+      </div>
+    </div>
+    <div class="desktop-menu">
+      <div class="container">
+        <nav id="menu">
           <ul>
-            <li><a href="#">Conception</a></li>
-            <li><a href="#">Problems getting pregnant</a></li>
-            <li><a href="#">Pregnancy health</a></li>
-            <li><a href="#">Labour and birth</a></li>
-            <li><a href="#">Miscarriage</a></li>
-            <li><a href="#">Baby names</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Parenting</a>
-          <ul>
-            <li><a href="#">Babies</a>
+            <li><a href="#">Menu 1</a>
               <ul>
-                <li><a href="#">Sleep</a></li>
-                <li><a href="#">Feeding</a></li>
-                <li><a href="#">Teething</a></li>
-                <li><a href="#">Baby health</a></li>
-                <li><a href="#">Development</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 2</a></li>
               </ul>
             </li>
-            <li><a href="#">Children</a>
+            <li><a href="#">Menu 1</a>
               <ul>
-                <li><a href="#">Toddlers</a></li>
-                <li><a href="#">Younger children</a></li>
-                <li><a href="#">Older children</a></li>
-                <li><a href="#">Child health</a></li>
-                <li><a href="#">Development</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 2</a></li>
               </ul>
             </li>
-            <li><a href="#">Education</a>
+            <li><a href="#">Menu 1</a>
               <ul>
-                <li><a href="#">Pre-school</a></li>
-                <li><a href="#">Primary</a></li>
-                <li><a href="#">Secondary</a></li>
-                <li><a href="#">Further education</a></li>
-                <li><a href="#">School gate</a></li>
-                <li><a href="#">Tutoring</a></li>
-                <li><a href="#">Special needs</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 2</a></li>
               </ul>
             </li>
           </ul>
-        </li>
-        <li><a href="#">Life</a>
-          <ul>
-            <li><a href="#">Relationships</a></li>
-            <li><a href="#">Home & garden</a></li>
-            <li><a href="#">Food & drink</a></li>
-            <li><a href="#">Culture</a></li>
-            <li><a href="#">Travel</a></li>
-            <li><a href="#">Local</a></li>
-            <li><a href="#">Reviews</a></li>
-            <li><a href="#">Celebrations</a></li>
-            <li><a href="#">Finance & money</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Work</a>
-          <ul>
-            <li><a href="#">Find a job</a></li>
-            <li><a href="#">Your rights</a></li>
-            <li><a href="#">Back to work</a></li>
-            <li><a href="#">Maternity leave</a></li>
-            <li><a href="#">Childcare</a></li>
-            <li><a href="#">Being a working parent</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+        </nav>
+      </div>
+    </div>
 
     <!-- Hero Product -->
     <div class="container">
