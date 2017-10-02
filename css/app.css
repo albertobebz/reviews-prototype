@@ -25,6 +25,7 @@ nav:not(.breadcrumb):first-of-type {
   background-color: #0061A1 !important; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .navbar-nav > li > .dropdown-menu {
   margin-top: 20px;
   border-top-left-radius: 4px;
@@ -90,6 +91,8 @@ nav:not(.breadcrumb):first-of-type {
     display: block !important;
   }
 }*/
+=======
+>>>>>>> parent of 4b9fbe8... add megamenu for desktop
 =======
 >>>>>>> parent of 4b9fbe8... add megamenu for desktop
 /*--- Utilities Classes ---*/
